@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+id: serempre
+label: Serempre
+weight: 3
+is_admin: null
+permissions:
+  - 'serempre registro'
+  

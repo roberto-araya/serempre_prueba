@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: serempre
+label: Serempre
+description: 'Serempre Menu'
+locked: false

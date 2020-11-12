@@ -1,0 +1,16 @@
+{
+    "name": "roberto-araya/serempre_prueba",
+    "description": "Módulo Drupal 8 con las funcionalidades solicitadas en la prueba para el cargo de desarrollador en Serempre.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Roberto Araya",
+            "email": "roberto.araya@btester.cl"
+        }
+    ],
+    "require": {
+        "drupal/bootstrap4_modal": "~1.14",
+        "drupal/csv_serialization": "~2.0-beta3"
+    }
+}

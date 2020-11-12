@@ -1,0 +1,10 @@
+name: Serempre Prueba
+type: module
+description: Módulo Drupal 8 con las funcionalidades solicitadas en la prueba para el cargo de desarrollador en Serempre.
+package: Serempre
+core: 8.x
+core_version_requirement: ^8
+dependencies:
+  - drupal:user
+  - bootstrap4_modal:bootstrap4_modal
+  - csv_serialization:csv_serialization

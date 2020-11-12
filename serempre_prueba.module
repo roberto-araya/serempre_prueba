@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Module file for serempre_prueba.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_form_user_login_form_alter().
+ */
+function serempre_prueba_form_user_login_form_alter(&$form, FormStateInterface $form_state) {
+  $form['#submit'][] = '_user_login_log';
+}
+
+/**
+ * Callback function for user_login_form.
+ */
+function _user_login_log(&$form, FormStateInterface $form_state) {
+  $fecha = \Drupal::time()->getRequestTime();
+  $ip = \Drupal::request()->getClientIp();
+  $uid = \Drupal::currentUser()->id();
+
+  $fields = [
+    'fecha' => $fecha,
+    'ip' => $ip,
+    'uid' => $uid,
+    'tipo_log' => 'login',
+  ];
+
+  db_insert('myusers_log')
+    ->fields($fields)
+    ->execute();
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function serempre_prueba_user_insert(EntityInterface $entity) {
+  $fecha = \Drupal::time()->getRequestTime();
+  $ip = \Drupal::request()->getClientIp();
+  $uid = $entity->id();
+
+  $fields = [
+    'fecha' => $fecha,
+    'ip' => $ip,
+    'uid' => $uid,
+    'tipo_log' => 'registro',
+  ];
+
+  db_insert('myusers_log')
+    ->fields($fields)
+    ->execute();
+}

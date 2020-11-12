@@ -1,0 +1,12 @@
+serempre registro:
+  title: 'Registro usuario Serempre'
+  description: 'Permite acceder a la página de registro y registrar usuarios.'
+  restrict access: true
+serempre consulta:
+  title: 'Consulta usuario Serempre'
+  description: 'Permite acceder a la página con el listado de usuarios registrados.'
+  restrict access: true
+serempre importacion:
+  title: 'Serempre importación de usuarios.'
+  description: 'Permite acceder a la página para importar usuarios.'
+  restrict access: true  

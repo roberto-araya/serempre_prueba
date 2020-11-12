@@ -1,0 +1,28 @@
+serempre_prueba.registro:
+  path: '/usuario/registro'
+  defaults:
+    _form: '\Drupal\serempre_prueba\Form\RegistroForm'
+    _title: 'Usuario registro'
+  requirements:
+    _permission: 'serempre registro'
+serempre_prueba.consulta:
+  path: '/usuario/consulta'
+  defaults:
+    _controller: '\Drupal\serempre_prueba\Controller\ConsultaController::content'
+    _title: 'Consulta de usuarios'
+  requirements:
+    _permission: 'serempre consulta'
+serempre_prueba.consulta.excel:
+  path: '/usuario/consulta/excel'
+  defaults:
+    _controller: '\Drupal\serempre_prueba\Controller\ConsultaControllerExcel::csvBuild'
+    _title: 'Exportar CSV de usuarios'
+  requirements:
+    _permission: 'serempre consulta'
+serempre_prueba.importacion:
+  path: '/usuario/importacion'
+  defaults:
+    _form: '\Drupal\serempre_prueba\Form\ImportacionForm'
+    _title: 'Importar usuarios'
+  requirements:
+    _permission: 'serempre importacion'

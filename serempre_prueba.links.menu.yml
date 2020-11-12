@@ -1,0 +1,24 @@
+serempre_prueba.registro:
+  title: 'Registro Usuario'
+  description: 'Registro de usuario'
+  route_name: serempre_prueba.registro
+  weight: 0
+  menu_name: serempre
+serempre_prueba.consulta:
+  title: 'Consulta Usuarios'
+  description: 'Listados de los usuarios registrados.'
+  route_name: serempre_prueba.consulta
+  weight: 1
+  menu_name: serempre
+serempre_prueba.consulta.excel:
+  title: 'Exportar Usuarios'
+  description: 'Exportar listados de los usuarios registrados.'
+  route_name: serempre_prueba.consulta.excel
+  weight: 1
+  menu_name: serempre
+serempre_prueba.importacion:
+  title: 'Importación Usuarios'
+  description: 'Importar usuarios.'
+  route_name: serempre_prueba.importacion
+  weight: 3
+  menu_name: serempre
